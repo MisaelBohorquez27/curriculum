@@ -9,6 +9,35 @@
     <meta name="description" content="Currículum Vitae de Misael Bohorquez">
     <meta name="author" content="Misael Bohorquez">
     <link rel="stylesheet" href="style.css">
+    <!-- Agrega la API de Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap" async defer></script>
+    <style>
+        /* Estilos para el contenedor del mapa */
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+    <script>
+        // Función para inicializar el mapa
+        function initMap() {
+            // Coordenadas de la ubicación
+            var ubicacion = {lat: -34.613150, lng: -58.377230};
+            
+            // Crea un nuevo mapa en el elemento con id "map"
+            var mapa = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15, // Nivel de zoom
+                center: ubicacion // Centro del mapa
+            });
+            
+            // Crea un marcador en la ubicación especificada
+            var marcador = new google.maps.Marker({
+                position: ubicacion,
+                map: mapa,
+                title: 'Ubicación'
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -93,13 +122,13 @@
      </section>
      <section>
         <h2>Imagen</h2>
-        <img src="https://placehold.co/600x400" alt="Mi Foto">
+        <img src="https://picsum.photos/200/300" alt="Mi Foto">
     </section>
     
     <section>
         <h2>Video</h2>
         <video width="320" height="240" controls>
-            <source src="https://www.coverr.co/s3/mp4/Turntable.mp4" type="video/mp4">
+            <source src="https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
         
