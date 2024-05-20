@@ -9,34 +9,24 @@
     <meta name="description" content="Currículum Vitae de Misael Bohorquez">
     <meta name="author" content="Misael Bohorquez">
     <link rel="stylesheet" href="style.css">
-    <!-- Agrega la API de Google Maps -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap" async defer></script>
-    <style>
-        /* Estilos para el contenedor del mapa */
-        #map {
-            height: 400px;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+   
+    <!-- Incluye Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Script para inicializar el mapa -->
     <script>
-        // Función para inicializar el mapa
-        function initMap() {
-            // Coordenadas de la ubicación
-            var ubicacion = { lat: -34.613150, lng: -58.377230 };
+        // Inicializa el mapa y establece la vista
+        var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 
-            // Crea un nuevo mapa en el elemento con id "map"
-            var mapa = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15, // Nivel de zoom
-                center: ubicacion // Centro del mapa
-            });
+        // Agrega una capa de mapa base de OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(mymap);
 
-            // Crea un marcador en la ubicación especificada
-            var marcador = new google.maps.Marker({
-                position: ubicacion,
-                map: mapa,
-                title: 'Ubicación'
-            });
-        }
+        // Agrega un marcador en una ubicación específica
+        L.marker([51.5, -0.09]).addTo(mymap)
+            .bindPopup('¡Hola! Esta es una ubicación de ejemplo.')
+            .openPopup();
     </script>
 </head>
 
@@ -119,13 +109,13 @@
             <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
             <input type="submit" value="Enviar">
             <fieldset>
-                <legend>Género</legend>
-                <input type="radio" id="genero1" name="genero" value="masculino">
-                <label for="genero1">Masculino</label><br>
-                <input type="radio" id="genero2" name="genero" value="femenino">
-                <label for="genero2">Femenino</label><br>
-                <input type="radio" id="genero3" name="genero" value="otro">
-                <label for="genero3">Otro</label><br>
+                <legend>Do you agree with this form?</legend>
+                <input type="radio" id="Si" name="agree" value="Si">
+                <label for="Si">Si</label><br>
+                <input type="radio" id="No" name="agree" value="No">
+                <label for="No">No</label><br>
+                <input type="radio" id="indeciso" name="agree" value="indeciso">
+                <label for="indeciso">No estoy seguro</label><br>
             </fieldset>
         </form>
     </section>
