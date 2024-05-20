@@ -22,14 +22,14 @@
         // Función para inicializar el mapa
         function initMap() {
             // Coordenadas de la ubicación
-            var ubicacion = {lat: -34.613150, lng: -58.377230};
-            
+            var ubicacion = { lat: -34.613150, lng: -58.377230 };
+
             // Crea un nuevo mapa en el elemento con id "map"
             var mapa = new google.maps.Map(document.getElementById('map'), {
                 zoom: 15, // Nivel de zoom
                 center: ubicacion // Centro del mapa
             });
-            
+
             // Crea un marcador en la ubicación especificada
             var marcador = new google.maps.Marker({
                 position: ubicacion,
@@ -109,7 +109,7 @@
             <li>Otros: Inglés, Portugués</li>
         </ul>
     </section>
-     <section id="formularios">
+    <section id="formularios">
         <form action="/enviar.php" method="post">
             <label for="nombre">Nombre:</label><br>
             <input type="text" id="nombre" name="nombre" required><br>
@@ -118,13 +118,22 @@
             <label for="mensaje">Mensaje:</label><br>
             <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
             <input type="submit" value="Enviar">
+            <fieldset>
+                <legend>Género</legend>
+                <input type="radio" id="genero1" name="genero" value="masculino">
+                <label for="genero1">Masculino</label><br>
+                <input type="radio" id="genero2" name="genero" value="femenino">
+                <label for="genero2">Femenino</label><br>
+                <input type="radio" id="genero3" name="genero" value="otro">
+                <label for="genero3">Otro</label><br>
+            </fieldset>
         </form>
-     </section>
-     <section id="img">
+    </section>
+    <section id="img">
         <h2>Imagen</h2>
         <img src="https://picsum.photos/200/300" alt="Mi Foto">
     </section>
-    
+
     <section id="video">
         <h2>Video</h2>
         <video width="320" height="240" controls>
@@ -137,36 +146,36 @@
         <div id="map"></div>
     </section>
     <section id="table">
-         <!-- Tabla -->
-    <table border="1">
-        <caption>Lista de productos</caption>
-        <thead>
-            <tr>
-                <th>Producto</th>
-                <th>Precio</th>
-                <th>Stock</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Producto A</td>
-                <td>$20</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>Producto B</td>
-                <td>$30</td>
-                <td>15</td>
-            </tr>
-            <tr>
-                <td>Producto C</td>
-                <td>$25</td>
-                <td>8</td>
-            </tr>
-        </tbody>
-    </table>
+        <!-- Tabla -->
+        <table border="1">
+            <caption>Lista de productos</caption>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Producto A</td>
+                    <td>$20</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Producto B</td>
+                    <td>$30</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Producto C</td>
+                    <td>$25</td>
+                    <td>8</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
-        
+
     <footer>
         <p>Copyright © 2023 Misael Bohorquez</p>
     </footer>
