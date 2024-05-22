@@ -1,0 +1,51 @@
+#map { 
+    width: 100%; 
+    height: 580px; 
+    box-shadow: 5px 5px 5px #888; 
+  } 
+
+  /* Definir fuentes */
+
+  /* Roboto */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxK.woff2') format('woff2');
+}
+
+/* Maitree */
+@font-face {
+  font-family: 'Maitree';
+  font-style: normal;
+  font-weight: 200 700;
+  src: url('https://fonts.gstatic.com/s/maitree/v5/MwQ3bhT01--coTJIWE0e8VO9fV0VB5g.woff2') format('woff2');
+}
+
+/* Noto Serif */
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 100 900;
+  src: url('https://fonts.gstatic.com/s/notoserif/v11/ga6Law1J5NzVDPw_LfDiv4AsQMxFW2erKfZj3BFkhlQkxg.ttf') format('truetype');
+}
+
+
+/* Aplicar fuentes a los elementos de la página */
+
+* {
+  font-family: 'Noto Serif', serif; /* Utilizar Roboto para los párrafos */
+}
+
+.my-class {
+  font-family: 'Maitree', sans-serif; /* Utilizar Maitree para el cuerpo del texto */
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif; /* Utilizar Noto Serif para los títulos */
+  
+}
+
+h2{
+  font-family: 'Maitree', sans-serif; /* Utilizar Maitree para el cuerpo del texto */
+}
