@@ -64,39 +64,41 @@
 
         </div>
     </section>
-    <section id="educacion">
-        <h2>Educación</h2>
-        <p>
-            Grado: <span>Ingenieria en Sistemas</span>
-        </p>
-        <p>
-            Institución: <span>Escuela Superior Politecnica del Litoral</span>
-        </p>
-        <p>
-            Fechas: <span>2019 - 2024</span>
-        </p>
+    <section class="educacion-experiencia"> 
+        <div class="educacion">
+            <h2>Educación</h2>
+            <p>
+                Grado: <span>Ingenieria en Sistemas</span>
+            </p>
+            <p>
+                Institución: <span>Escuela Superior Politecnica del Litoral</span>
+            </p>
+            <p>
+                Fechas: <span>2019 - 2024</span>
+            </p>
+        </div>
+        <div class="experiencia">
+            <h2>Experiencia</h2>
+            <p>
+                Cargo: <span>Admninistrador de bases de datos</span>
+            </p>
+            <p>
+                Empresa: <span>Solinal</span>
+            </p>
+            <p>
+                Fechas: <span>2022 - Presente</span>
+            </p>
+            <p>
+                Descripción:
+            <ul>
+                <li>Gestion de bases de datos</li>
+                <li>Mantenimiento de bases de datos</li>
+                <li>Implementacion de inteligencia artificial</li>
+            </ul>
+            </p>
+        </div>
     </section>
-    <section id="experiencia">
-        <h2>Experiencia</h2>
-        <p>
-            Cargo: <span>Admninistrador de bases de datos</span>
-        </p>
-        <p>
-            Empresa: <span>Solinal</span>
-        </p>
-        <p>
-            Fechas: <span>2022 - Presente</span>
-        </p>
-        <p>
-            Descripción:
-        <ul>
-            <li>Gestion de bases de datos</li>
-            <li>Mantenimiento de bases de datos</li>
-            <li>Implementacion de inteligencia artificial</li>
-        </ul>
-        </p>
-    </section>
-    <section id="habilidades">
+    <section class="habilidades">
         <h2>Habilidades</h2>
         <ul>
             <li>Lenguajes de programación: Python, JavaScript, Java</li>
@@ -105,43 +107,51 @@
             <li>Otros: Inglés, Portugués</li>
         </ul>
     </section>
-    <section id="formularios">
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact  me</h2>
+        
         <form action="/enviar.php" method="post">
-            <label for="nombre">Nombre:</label><br>
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="nombre">Nombre:</label><br>
             <input type="text" id="nombre" name="nombre" required><br>
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" required><br>
             <label for="mensaje">Mensaje:</label><br>
             <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
             <input type="submit" value="Enviar">
-            <fieldset>
-                <legend>Do you agree with this form?</legend>
-                <input type="radio" id="Si" name="agree" value="Si">
-                <label for="Si">Si</label><br>
-                <input type="radio" id="No" name="agree" value="No">
-                <label for="No">No</label><br>
-                <input type="radio" id="indeciso" name="agree" value="indeciso">
-                <label for="indeciso">No estoy seguro</label><br>
-            </fieldset>
+                </div>
+                <div class="input-box">
+                    <fieldset>
+                        <legend>Do you agree with this form?</legend>
+                        <input type="radio" id="Si" name="agree" value="Si">
+                        <label for="Si">Si</label><br>
+                        <input type="radio" id="No" name="agree" value="No">
+                        <label for="No">No</label><br>
+                        <input type="radio" id="indeciso" name="agree" value="indeciso">
+                        <label for="indeciso">No estoy seguro</label><br>
+                    </fieldset>
+                </div>
+            </div>
         </form>
     </section>
-    <section id="img">
+    <section class="img">
         <h2>Imagen</h2>
         <img src="https://picsum.photos/200/300" alt="Mi Foto">
     </section>
 
-    <section id="video">
+    <section class="video">
         <h2>Video</h2>
         <video width="320" height="240" controls>
             <source src="https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
     </section>
-    <section id="map">
+    <section class="map">
         <!-- Elemento contenedor del mapa -->
         <div id="mapid" style="height: 400px;"></div>
     </section>
-    <section id="table">
+    <section class="table">
         <!-- Tabla -->
         <table border="1">
             <caption>Lista de productos</caption>

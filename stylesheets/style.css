@@ -112,11 +112,18 @@ h2 {
   color: var(--main-color);
   display: none;
 }
-/*
+
 section{
-  min-height: 100vh;
-  padding: 5rem 5% 5rem;
-}*/
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: #fff;
+  gap: 15rem;
+  min-height: 32vh;
+  padding: 3rem 7% 3rem;
+  width: 80%;
+}
 
 .foto-nombre{
   display: flex;
@@ -164,9 +171,78 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25rem;
-  min-height: 50vh;
-  padding: 3rem 5% 3rem;
-  width: 90%;
+}
+
+.info-adicional{
+  justify-content: center;
+  align-items: center;
+  display: grid;
+}
+
+.info-adicional p{
+  padding: 3%;
+}
+
+.educacion-experiencia{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.educacion{
+ 
+}
+
+.experiencia{
+  
+}
+
+.contact{
+  background-color: var(--bg-color);
+}
+
+.contact h2{
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.contact form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.contact form .input-box{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact form.input-box input,
+.contact form textarea{
+  width: 100%;
+  padding: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  border: 2px solid var(--main-color);
+  margin: 1.5rem 0;
+  resize: none;
+}
+
+
+
+.map {
+  width: 80%; /* Ajusta el ancho según tus necesidades */
+  max-width: 600px; /* Ancho máximo para evitar que se haga demasiado grande */
+  height: 400px; /* Altura del contenedor del mapa */
+  overflow: hidden; /* Oculta cualquier desbordamiento */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
